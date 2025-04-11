@@ -11,12 +11,9 @@
         <!-- NAVIGATION BAR -->
         <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
             <div class="max-w-6xl mx-auto px-4">
-
-                <!-- Top Container (Responsive layout) -->
-                <div class="flex flex-col md:flex-row md:items-center md:justify-between w-full">
-            
-                    <!-- Logo + Borgor + Search Bar (Mobile Type) -->
-                    <div class="flex items-center justify-between w-full">
+        
+                <!-- Flex Container -->
+                <div class="flex items-center justify-between w-full">
             
                     <!-- Logo -->
                     <div class="flex items-center space-x-2">
@@ -24,35 +21,36 @@
                         <h1 class="text-2xl font-bold">RecipeBook</h1>
                     </div>
             
-                    <!-- Search Bar -->
-                    <div class="pl-12 pr-12 align-middle flex flex-1 justify-center md:justify-start mt-4 md:mt-0">
-                        <input type="text" placeholder="Search recipes..." class="w-full md:w-64 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+                    <!-- Desktop Nav Links -->
+                    <ul class="hidden md:flex md:space-x-6 font-semibold text-right md:text-left">
+                        <li><a href="#Home" class="hover:text-yellow-500 transform hover:scale-105 transition duration-300">Home</a></li>
+                        <li><a href="#recipe" class="hover:text-yellow-500 transform hover:scale-105 transition duration-300">Recipes</a></li>
+                        <li><a href="#About" class="hover:text-yellow-500 transform hover:scale-105 transition duration-300">About</a></li>
+                    </ul>
+            
+                    <!-- Desktop Search Bar -->
+                    <div class="hidden md:flex md:ml-4">
+                        <input type="text" placeholder="Search recipes..." class="w-64 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" />
                     </div>
             
-                    <!-- Borgor -->
+                    <!-- Mobile Burger Button -->
                     <button id="burgerButton" class="md:hidden text-gray-600 hover:text-yellow-500">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
-                <!-- Nav Links (Desktop Type) -->
-                    <ul id="navLinks" class="hidden md:flex md:space-x-6 font-semibold md:ml-6 mt-4 md:mt-0 text-right md:text-left pr-6">
-                        <li><a href="#Home" class="hover:text-yellow-500 block  transform hover:scale-105 transition duration-300">Home</a></li>
-                        <li><a href="#recipe" class="hover:text-yellow-500 block  transform hover:scale-105 transition duration-300">Recipes</a></li>
-                        <li><a href="#About" class="hover:text-yellow-500 block  transform hover:scale-105 transition duration-300">About</a></li>
-                    </ul>
-                </div>
             
-                <!-- Mobile Nav Links (Borgor Contents) -->
-                <ul id="mobileNavLinks" class="hidden md:hidden text-right space-y-2 font-semibold mt-4">
+                <!-- Mobile Nav Links -->
+                <ul id="mobileNavLinks" class="hidden md:hidden mt-4 text-right space-y-2 font-semibold">
                     <li><a href="#Home" class="hover:text-yellow-500 block">Home</a></li>
                     <li><a href="#recipe" class="hover:text-yellow-500 block">Recipes</a></li>
                     <li><a href="#About" class="hover:text-yellow-500 block">About</a></li>
                 </ul>
         
             </div>
-        </nav>  
+        </nav>
+    
     
         <!-- HERO SECTION -->
         <section id="Home" class="bg-cover bg-center text-center py-40 px-4" style="background-image: url('/images/Hero.jpg');">
