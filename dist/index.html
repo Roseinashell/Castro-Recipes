@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recipe ni Rochelle</title>
+        <link rel="stylesheet" href="/src/output.css">
+    </head>
+    <body class="bg-gray-100 text-gray-800">
+
+        <!-- NAVIGATION BAR -->
+        <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
+            <div class="max-w-6xl mx-auto px-4">
+
+                <!-- Top Container (Responsive layout) -->
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between w-full">
+            
+                    <!-- Logo + Borgor + Search Bar (Mobile Type) -->
+                    <div class="flex items-center justify-between w-full">
+            
+                    <!-- Logo -->
+                    <div class="flex items-center space-x-2">
+                        <img src="/images/logo.jpg" alt="Logo" class="w-10 h-10 rounded-full" />
+                        <h1 class="text-2xl font-bold">RecipeBook</h1>
+                    </div>
+            
+                    <!-- Search Bar -->
+                    <div class="pl-12 pr-12 align-middle flex flex-1 justify-center md:justify-start mt-4 md:mt-0">
+                        <input type="text" placeholder="Search recipes..." class="w-full md:w-64 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+                    </div>
+            
+                    <!-- Borgor -->
+                    <button id="burgerButton" class="md:hidden text-gray-600 hover:text-yellow-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Nav Links (Desktop Type) -->
+                    <ul id="navLinks" class="hidden md:flex md:space-x-6 font-semibold md:ml-6 mt-4 md:mt-0 text-right md:text-left pr-6">
+                        <li><a href="#Home" class="hover:text-yellow-500 block  transform hover:scale-105 transition duration-300">Home</a></li>
+                        <li><a href="#recipe" class="hover:text-yellow-500 block  transform hover:scale-105 transition duration-300">Recipes</a></li>
+                        <li><a href="#About" class="hover:text-yellow-500 block  transform hover:scale-105 transition duration-300">About</a></li>
+                    </ul>
+                </div>
+            
+                <!-- Mobile Nav Links (Borgor Contents) -->
+                <ul id="mobileNavLinks" class="hidden md:hidden text-right space-y-2 font-semibold mt-4">
+                    <li><a href="#Home" class="hover:text-yellow-500 block">Home</a></li>
+                    <li><a href="#recipe" class="hover:text-yellow-500 block">Recipes</a></li>
+                    <li><a href="#About" class="hover:text-yellow-500 block">About</a></li>
+                </ul>
+        
+            </div>
+        </nav>  
+    
+        <!-- HERO SECTION -->
+        <section id="Home" class="bg-cover bg-center text-center py-40 px-4" style="background-image: url('/images/Hero.jpg');">
+            <div class="bg-black bg-opacity-50 py-16 px-4">
+                <h2 class="text-white text-4xl font-bold md:text-5xl mb-4">Discover Delicious Homemade Recipes with Ease</h2>
+                <p class="text-white text-lg md:text-xl mb-6 max-w-3xl mx-auto">Explore a variety of easy-to-make, mouth-watering recipes from around the world. Whether you're a beginner or a pro, we've got something for every taste and skill level.</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#recipe" class="bg-yellow-500 text-gray-800 px-8 py-3 rounded-full text-xl font-semibold hover:bg-yellow-600 transition duration-300">Explore Recipes</a>
+                    <a href="#About" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full text-xl font-semibold hover:bg-white hover:text-gray-800 transition duration-300">Learn More About Us</a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- RECIPE LISTING SECTION -->
+        <section id="recipe" class="py-12">
+            <h2 class="text-3xl font-bold text-center mb-6">Delicious Recipes</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+    
+                <!-- Recipe Cards -->
+                <div onclick="openModal('recipe1')" class="bg-white p-4 shadow-lg rounded-lg cursor-pointer hover:shadow-xl transform hover:scale-105 transition duration-300">
+                    <img src="/images/pizza.jpg" alt="Pizza" class="rounded-lg w-full h-48 object-cover hover:opacity-90 transition" />
+                    <h3 class="text-xl font-semibold mt-3">Classic Margherita Pizza</h3>
+                    <p class="text-gray-600 mt-1">Tomato sauce, mozzarella, fresh basil, and olive oil on crisp dough.</p>
+                </div>
+    
+                <div onclick="openModal('recipe2')" class="bg-white p-4 shadow-lg rounded-lg cursor-pointer hover:shadow-xl transform hover:scale-105 transition duration-300">
+                    <img src="/images/pasta.jpg" alt="Pasta" class="rounded-lg w-full h-48 object-cover hover:opacity-90 transition" />
+                    <h3 class="text-xl font-semibold mt-3">Creamy Alfredo Pasta</h3>
+                    <p class="text-gray-600 mt-1">Rich and creamy fettuccine pasta tossed in Alfredo sauce.</p>
+                </div>
+        
+                <div onclick="openModal('recipe3')" class="bg-white p-4 shadow-lg rounded-lg cursor-pointer hover:shadow-xl transform hover:scale-105 transition duration-300">
+                    <img src="/images/burger.jpg" alt="Burger" class="rounded-lg w-full h-48 object-cover hover:opacity-90 transition" />
+                    <h3 class="text-xl font-semibold mt-3">Juicy Cheeseburger</h3>
+                    <p class="text-gray-600 mt-1">Grilled beef patty with melted cheese and fresh toppings.</p>
+                </div>
+        
+                <div onclick="openModal('recipe4')" class="bg-white p-4 shadow-lg rounded-lg cursor-pointer hover:shadow-xl transform hover:scale-105 transition duration-300">
+                    <img src="/images/adobo.jpg" alt="Adobo" class="rounded-lg w-full h-48 object-cover hover:opacity-90 transition" />
+                    <h3 class="text-xl font-semibold mt-3">Chicken Adobo</h3>
+                    <p class="text-gray-600 mt-1">Filipino classic made with soy sauce, vinegar, and garlic.</p>
+                </div>
+        
+                <div onclick="openModal('recipe5')" class="bg-white p-4 shadow-lg rounded-lg cursor-pointer hover:shadow-xl transform hover:scale-105 transition duration-300">
+                    <img src="/images/cordon.jpg" alt="Cordon Bleu" class="rounded-lg w-full h-48 object-cover hover:opacity-90 transition" />
+                    <h3 class="text-xl font-semibold mt-3">Chicken Cordon Bleu</h3>
+                    <p class="text-gray-600 mt-1">Breaded chicken breast stuffed with ham and cheese.</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- MODAL -->
+        <div id="modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
+            <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full relative">
+                <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-600 text-2xl hover:text-black">&times;</button>
+                <h2 id="modal-title" class="text-2xl font-bold"></h2>
+                <div id="modal-content" class="mt-4 text-gray-700 whitespace-pre-line"></div>
+            </div>
+        </div>
+    
+        <!-- FOOTER -->
+        <footer id="About" class="bg-gray-800 text-white mt-12 py-6 p-4">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-6">
+                <div class="flex items-center space-x-3">
+                    <img src="/images/logo.jpg" alt="Logo" class="w-8 h-8 rounded-full" />
+                    <p>© 2025 Recipe ni Rochelle | BSCS401</p>
+                </div>
+                <div class="flex space-x-4 mt-2 md:mt-0">
+                    <a href="#Facebook" class="hover:text-yellow-400">Facebook</a>
+                    <a href="#Instagram" class="hover:text-yellow-400">Instagram</a>
+                    <a href="#" class="hover:text-yellow-400">Email Us</a>
+                </div>
+            </div>
+        </footer>
+    
+        <!-- MODAL SCRIPT -->
+        <script>
+            const recipes = {
+                recipe1: {
+                    title: "Classic Margherita Pizza",
+                    content: `🍕 Ingredients:\n- Tomato Sauce\n- Mozzarella Cheese\n- Fresh Basil\n- Olive Oil\n\n🧑‍🍳 Steps:\nBake at 475°F (245°C) for 10-12 minutes.`
+                },
+                recipe2: {
+                    title: "Creamy Alfredo Pasta",
+                    content: `🍝 Ingredients:\n- Fettuccine Pasta\n- Heavy Cream\n- Butter\n- Garlic\n- Parmesan Cheese\n\n🧑‍🍳 Steps:\nCook pasta and mix with creamy Alfredo sauce.`
+                },
+                recipe3: {
+                    title: "Juicy Cheeseburger",
+                    content: `🍔 Ingredients:\n- Ground Beef\n- Cheese\n- Lettuce\n- Tomato\n- Burger Buns\n\n🧑‍🍳 Steps:\nGrill patty, toast bun, assemble with toppings.`
+                },
+                recipe4: {
+                    title: "Chicken Adobo",
+                    content: `🥘 Ingredients:\n- Chicken\n- Soy Sauce\n- Vinegar\n- Garlic\n- Bay Leaves\n- Black Pepper\n\n🧑‍🍳 Steps:\nSimmer chicken in soy sauce and vinegar until tender.`
+                },
+                recipe5: {
+                    title: "Chicken Cordon Bleu",
+                    content: `🍽️ Ingredients:\n- Chicken Breast\n- Ham\n- Cheese\n- Breadcrumbs\n- Eggs\n\n🧑‍🍳 Steps:\nStuff chicken with ham & cheese, coat in breadcrumbs, then bake or fry.`
+                }
+            };
+    
+            function openModal(recipeKey) {
+                document.getElementById('modal-title').innerText = recipes[recipeKey].title;
+                document.getElementById('modal-content').innerText = recipes[recipeKey].content;
+                document.getElementById('modal').classList.remove('hidden');
+            }
+    
+            function closeModal() {
+                document.getElementById('modal').classList.add('hidden');
+            }
+        </script>
+    
+        <!-- BORGOR TOGGLE -->
+        <script>
+            const burgerButton = document.getElementById('burgerButton');
+            const mobileNavLinks = document.getElementById('mobileNavLinks');
+            
+            burgerButton.addEventListener('click', () => {mobileNavLinks.classList.toggle('hidden');});
+        </script>
+    
+    </body>
+</html>
