@@ -33,7 +33,7 @@
                         <input type="text" placeholder="Search recipes..." class="w-64 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" />
                     </div>
             
-                    <!-- Mobile Burger Button -->
+                    <!-- Mobile Borgor Button -->
                     <button id="burgerButton" class="md:hidden text-gray-600 hover:text-yellow-500">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -131,23 +131,102 @@
             const recipes = {
                 recipe1: {
                     title: "Classic Margherita Pizza",
-                    content: `🍕 Ingredients:\n- Tomato Sauce\n- Mozzarella Cheese\n- Fresh Basil\n- Olive Oil\n\n🧑‍🍳 Steps:\nBake at 475°F (245°C) for 10-12 minutes.`
+                    content: `🍕 Ingredients:
+                        - Tomato Sauce
+                        - Mozzarella Cheese
+                        - Fresh Basil
+                        - Olive Oil
+                        - Pizza Dough
+
+                        🧑‍🍳 Steps:
+                        1. Preheat your oven to 475°F (245°C).
+                        2. Roll out the pizza dough on a floured surface to your desired thickness.
+                        3. Spread an even layer of tomato sauce over the dough.
+                        4. Add slices of fresh mozzarella cheese.
+                        5. Drizzle with olive oil and add a few fresh basil leaves.
+                        6. Transfer to a baking stone or sheet and bake for 10–12 minutes until crust is golden and cheese is bubbly.
+                        7. Garnish with additional basil and serve hot.`
                 },
                 recipe2: {
                     title: "Creamy Alfredo Pasta",
-                    content: `🍝 Ingredients:\n- Fettuccine Pasta\n- Heavy Cream\n- Butter\n- Garlic\n- Parmesan Cheese\n\n🧑‍🍳 Steps:\nCook pasta and mix with creamy Alfredo sauce.`
+                    content: `🍝 Ingredients:
+                        - Fettuccine Pasta
+                        - Heavy Cream
+                        - Butter
+                        - Garlic
+                        - Parmesan Cheese
+                        - Salt & Pepper
+
+                        🧑‍🍳 Steps:
+                        1. Bring a pot of salted water to a boil and cook fettuccine until al dente.
+                        2. In a separate pan, melt butter over medium heat.
+                        3. Add minced garlic and sauté for 1–2 minutes.
+                        4. Pour in heavy cream and stir until warm and slightly thickened.
+                        5. Stir in grated Parmesan cheese, mixing until smooth.
+                        6. Season with salt and pepper to taste.
+                        7. Add drained pasta to the sauce and toss until well coated.
+                        8. Serve with extra Parmesan on top.`
                 },
                 recipe3: {
                     title: "Juicy Cheeseburger",
-                    content: `🍔 Ingredients:\n- Ground Beef\n- Cheese\n- Lettuce\n- Tomato\n- Burger Buns\n\n🧑‍🍳 Steps:\nGrill patty, toast bun, assemble with toppings.`
+                    content: `🍔 Ingredients:
+                        - Ground Beef
+                        - Cheese Slices
+                        - Lettuce
+                        - Tomato
+                        - Burger Buns
+                        - Salt & Pepper
+                        - Optional: Pickles, Onion, Ketchup, Mustard
+
+                        🧑‍🍳 Steps:
+                        1. Form ground beef into patties and season with salt and pepper.
+                        2. Preheat grill or skillet to medium-high heat.
+                        3. Cook patties for 3–4 minutes on each side (or to desired doneness).
+                        4. In the last minute of cooking, place cheese slice on top and let it melt.
+                        5. Toast burger buns lightly on the grill or in a pan.
+                        6. Assemble burger: bottom bun, lettuce, tomato, patty with cheese, and any other desired toppings.
+                        7. Top with the bun and serve immediately.`
                 },
                 recipe4: {
                     title: "Chicken Adobo",
-                    content: `🥘 Ingredients:\n- Chicken\n- Soy Sauce\n- Vinegar\n- Garlic\n- Bay Leaves\n- Black Pepper\n\n🧑‍🍳 Steps:\nSimmer chicken in soy sauce and vinegar until tender.`
+                    content: `🥘 Ingredients:
+                        - Chicken (bone-in preferred)
+                        - Soy Sauce
+                        - Vinegar
+                        - Garlic
+                        - Bay Leaves
+                        - Whole Black Peppercorns
+                        - Onion (optional)
+
+                        🧑‍🍳 Steps:
+                        1. In a pot, combine soy sauce, vinegar, crushed garlic, bay leaves, and peppercorns.
+                        2. Add chicken pieces and let marinate for 30 minutes (optional).
+                        3. Bring pot to a boil, then reduce to a simmer.
+                        4. Cook uncovered for 30–40 minutes or until chicken is tender.
+                        5. Optionally, remove chicken and pan-fry until golden, then return to sauce.
+                        6. Simmer until sauce thickens slightly.
+                        7. Serve hot with steamed rice.`
                 },
                 recipe5: {
                     title: "Chicken Cordon Bleu",
-                    content: `🍽️ Ingredients:\n- Chicken Breast\n- Ham\n- Cheese\n- Breadcrumbs\n- Eggs\n\n🧑‍🍳 Steps:\nStuff chicken with ham & cheese, coat in breadcrumbs, then bake or fry.`
+                    content: `🍽️ Ingredients:
+                        - Chicken Breast
+                        - Sliced Ham
+                        - Swiss or Mozzarella Cheese
+                        - Breadcrumbs
+                        - Eggs
+                        - Flour
+                        - Salt & Pepper
+
+                        🧑‍🍳 Steps:
+                        1. Flatten chicken breasts to even thickness using a mallet.
+                        2. Layer ham and cheese inside, then roll up tightly.
+                        3. Secure with toothpicks if needed.
+                        4. Dredge in flour, dip in beaten eggs, and coat with breadcrumbs.
+                        5. Preheat oven to 375°F (190°C) or heat oil for frying.
+                        6. For baking: place in a greased dish and bake for 25–30 minutes.
+                        7. For frying: fry in hot oil until golden and cooked through, about 8–10 minutes.
+                        8. Rest for a few minutes, then slice and serve.`
                 }
             };
     
